@@ -1,0 +1,15 @@
+== VS Code Extensions
+
+.Table VS Code Extension
+|===
+|https://github.com/brobeson/brobeson/labels/alpha |https://github.com/brobeson/vscode-cppcheck[VS Code Cppcheck] |Run https://github.com/danmar/cppcheck[Cppcheck] on your C and C++ code.
+
+|https://github.com/brobeson/brobeson/labels/not%20started
+|https://github.com/brobeson/vscode-lizard[VS Code Lizard]
+|Run https://github.com/terryyin/lizard[Lizard] complexity analysis on your code.
+|===
+
+== Publications
+
+1. B. Robeson, M. Javanmardi, and X. Qi, “Object tracking using temporally matching filters,” *IET Computer Vision*, vol. 15, no. 4, pp. 245–257, Mar. 2021. [Online]. Available: <https://ietresearch.onlinelibrary.wiley.com/doi/abs/10.1049/cvi2.12040>
+   - [BibTeX Entry](https://github.com/brobeson/brobeson/blob/fb9805119104bd57929e5744db4e975b4026901d/publications.bib#L1-L13)
