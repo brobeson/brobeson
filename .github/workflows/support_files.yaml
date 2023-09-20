@@ -1,0 +1,47 @@
+# Copyright 2023 brobeson
+
+on:
+  workflow_call:
+
+jobs:
+  spellCheck:
+    name: Spell Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone the repository
+        uses: actions/checkout@v3
+      - name: Check spelling
+        uses: streetsidesoftware/cspell-action@v2
+        with:
+          check_dot_files: true
+          inline: error
+          incremental_files_only: false
+          files: |
+            **/*
+            !.git/
+
+  lintCheck:
+    name: Lint Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone the repository
+        uses: actions/checkout@v3
+      - name: Check for Markdown lint
+        uses: nosborn/github-action-markdown-cli@v3
+        with:
+          files: .
+          dot: true
+          ignore_files: node_modules
+
+  formatCheck:
+    name: Format Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone the repository
+        uses: actions/checkout@v3
+      - name: Check formatting
+        uses: creyD/prettier_action@v4.3
+        with:
+          dry: true
+          prettier_options: >
+            --check ./**/*.{md,json,yaml,yml}

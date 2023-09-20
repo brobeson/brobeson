@@ -1,0 +1,27 @@
+// == VS Code Extensions
+
+// .Click to view my VS Code extensions.
+// [%collapsible]
+// ====
+// https://github.com/brobeson/ctest-lab[CTest Lab] 🧪:: Integrate https://cmake.org/cmake/help/latest/manual/ctest.1.html[CTest]-based tests with VS Code.
+// https://github.com/brobeson/vscode-checkwriting[VS Code Check Writing] 📝:: Proofread your writing in VS Code.
+// https://github.com/brobeson/vscode-cmake-lint[VS Code CMake Lint] 🔧:: Run https://github.com/cheshirekow/cmake_format[cmake-lint] on your CMake scripts and CMakeLists.txt files.
+// https://github.com/brobeson/vscode-cppcheck[VS Code Cppcheck] 🔧:: Run https://github.com/danmar/cppcheck[Cppcheck] on your C and C++ code.
+// https://github.com/brobeson/vscode-lizard[VS Code Lizard] 🔧:: Run https://github.com/terryyin/lizard[Lizard] complexity analysis on your code.
+// ====
+
+== Reusable Workflows
+
+I have https://docs.github.com/en/actions/using-workflows/reusing-workflows[reusable GitHub workflows] that others may use.
+Read the https://github.com/brobeson/brobeson/blob/reusable_workflows/.github/workflows/README.md[documentation] for general information.
+Read each workflow's documentation for specific information about that workflow.
+
+[horizontal]
+https://github.com/brobeson/brobeson/blob/reusable_workflows/.github/workflows/README.adoc#support-files[Support File Quality]:: Check for spelling mistakes, documentation lint, and formatting errors.
+// https://github.com/brobeson/brobeson/blob/reusable_workflows/.github/workflows/README.adoc#typescript[TypeScript Build & Test]:: Build a https://www.typescriptlang.org/[TypeScript] project and run tests.
+// https://github.com/brboeson/brobeson/blob/reusable_workflows/.github/workflows/README.adoc#cpp[C++ & CMake Build, Test, & Package]:: Build, test, and package a C++ project with CMake.
+
+// == Publications
+
+// * B. Robeson, M. Javanmardi, and X. Qi, "Object tracking using temporally matching filters," _IET Computer Vision_, vol. 15, no. 4, pp. 245–257, Mar. 2021. [Online]. Available: https://ietresearch.onlinelibrary.wiley.com/doi/abs/10.1049/cvi2.12040
+// https://github.com/brobeson/brobeson/blob/fb9805119104bd57929e5744db4e975b4026901d/publications.bib#L1-L13
