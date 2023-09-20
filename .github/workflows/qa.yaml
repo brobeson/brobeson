@@ -1,0 +1,10 @@
+# Copyright 2023 brobeson
+
+name: Quality Assurance
+on:
+  pull_request:
+  push:
+jobs:
+  staticAnalysis:
+    name: Quality Control
+    uses: ./.github/workflows/support_files.yaml
