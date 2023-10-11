@@ -1,6 +1,9 @@
 # Copyright 2023 brobeson
 
+name: Quality Control
 on:
+  push:
+  pull:
   workflow_call:
 
 jobs:
