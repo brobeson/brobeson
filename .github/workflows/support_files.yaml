@@ -3,7 +3,7 @@
 name: Quality Control
 on:
   push:
-  pull:
+  pull_request:
   workflow_call:
 
 jobs:
