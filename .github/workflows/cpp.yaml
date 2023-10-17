@@ -10,7 +10,7 @@ jobs:
       - name: Clone the repository
         uses: actions/checkout@v3
       - name: Configure the Build System
-        run: cmake -D CMAKE_BUILD_TYPE:STRING=Debug -B Build
+        run: cmake -D CMAKE_BUILD_TYPE:STRING=Debug -B build
       - name: Build the Software
         run: cmake --build build --parallel $(nproc)
       - name: Run Unit Tests
