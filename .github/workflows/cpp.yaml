@@ -4,13 +4,16 @@ on:
   workflow_call:
 jobs:
   staticAnalysis:
-    name: Static Analysis
+    name: Build & Test
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        build_type: [Debug, Release]
     steps:
       - name: Clone the repository
         uses: actions/checkout@v3
       - name: Configure the Build System
-        run: cmake -D CMAKE_BUILD_TYPE:STRING=Debug -B build
+        run: cmake -D CMAKE_BUILD_TYPE:STRING=${{matrix.build_type}} -B build
       - name: Build the Software
         run: cmake --build build --parallel $(nproc)
       - name: Run Unit Tests
