@@ -1,0 +1,29 @@
+# Copyright 2023 brobeson
+
+on:
+  workflow_call:
+jobs:
+  staticAnalysis:
+    name: Static Analysis
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone the repository
+        uses: actions/checkout@v3
+      - name: Check formatting
+        run: black --check .
+      - name: Run PyLint
+        run: pylint .
+      - name: Run MyPy
+        run: mypy .
+  test:
+    name: Unit Tests
+    runs-on: ubuntu-latest
+    # TODO Use a test matrix. The dimensions are OS (Linux, MacOS, Windows) and
+    # Python version (3.7 and later?)
+    # strategy:
+    #   matrix:
+    steps:
+      - name: Clone the repository
+        uses: actions/checkout@v3
+      - name: Run tests
+        run: pytest
