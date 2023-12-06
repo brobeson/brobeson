@@ -25,6 +25,7 @@ jobs:
 
   lintCheck:
     name: Lint Check
+    needs: formatCheck
     runs-on: ubuntu-latest
     steps:
       - name: Clone the repository
