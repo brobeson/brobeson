@@ -12,14 +12,12 @@
 
 == Reusable Workflows
 
-I have https://docs.github.com/en/actions/using-workflows/reusing-workflows[reusable GitHub workflows] that others may use.
-Read the https://github.com/brobeson/brobeson/blob/reusable_workflows/.github/workflows/README.md[documentation] for general information.
-Read each workflow's documentation for specific information about that workflow.
-
-[horizontal]
-https://github.com/brobeson/brobeson/blob/reusable_workflows/.github/workflows/README.md#support-files[Support File Quality]:: Check for spelling mistakes, documentation lint, and formatting errors.
-// https://github.com/brobeson/brobeson/blob/reusable_workflows/.github/workflows/README.md#typescript[TypeScript Build & Test]:: Build a https://www.typescriptlang.org/[TypeScript] project and run tests.
-// https://github.com/brboeson/brobeson/blob/reusable_workflows/.github/workflows/README.md#cpp[C++ & CMake Build, Test, & Package]:: Build, test, and package a C++ project with CMake.
+[cols="1,1,1"]
+|===
+|https://github.com/brobeson/SupportFileQuality[Support File Quality]
+|image:https://img.shields.io/github/v/release/brobeson/SupportFileQuality?sort=semver&logo=github[GitHub Release]
+|A reusable workflow to ensure quality in dot files 
+|===
 
 // == Publications
 
