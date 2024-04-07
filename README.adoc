@@ -15,7 +15,7 @@
 [cols="1,1,1"]
 |===
 |https://github.com/brobeson/ActionRelease[ActionRelease]
-|image:https://img.shields.io/github/v/release/brobeson/ActionRelease[GitHub Release,link=https://github.com/brobeson/ActionRelease/releases/tag/v1.0.0]
+|image:https://img.shields.io/github/v/release/brobeson/ActionRelease?sort=semver&logo=github&label=Release[GitHub Release,link=https://github.com/brobeson/ActionRelease/releases/latest]
 |Automate releasing a new version of a GitHub workflow or action
 
 |https://github.com/brobeson/SupportFileQuality[Support File Quality]
