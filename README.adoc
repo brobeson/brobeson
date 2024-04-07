@@ -14,12 +14,12 @@
 
 [cols="1,1,1"]
 |===
-|https://github.com/brobeson/ActionRelease[ActionRelease]
+|https://github.com/brobeson/ActionRelease[Action Release]
 |image:https://img.shields.io/github/v/release/brobeson/ActionRelease?sort=semver&logo=github&label=Release[GitHub Release,link=https://github.com/brobeson/ActionRelease/releases/latest]
 |Automate releasing a new version of a GitHub workflow or action
 
 |https://github.com/brobeson/SupportFileQuality[Support File Quality]
-|image:https://img.shields.io/github/v/release/brobeson/SupportFileQuality?sort=semver&logo=github[GitHub Release]
+|image:https://img.shields.io/github/v/release/brobeson/SupportFileQuality?sort=semver&logo=github&label=Release[GitHub Release,link=https://github.com/brobeson/SupportFileQuality/releases/latest]
 |A reusable workflow to ensure quality in dot files 
 |===
 
