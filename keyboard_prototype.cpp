@@ -1,4 +1,11 @@
-#include <pitches.h>
+const int NOTE_A3 = 220;
+const int NOTE_B3 = 247;
+const int NOTE_C4 = 262;
+const int NOTE_D4 = 277;
+const int NOTE_E4 = 330;
+const int NOTE_F4 = 349;
+const int NOTE_G3 = 196;
+const int NOTE_G4 = 392;
 
 // variables
 int note[] = {NOTE_C4, NOTE_D4, NOTE_E4, NOTE_F4, NOTE_G4};
