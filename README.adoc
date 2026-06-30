@@ -24,7 +24,11 @@
 
 |https://github.com/brobeson/SupportFileQuality[Support File Quality]
 |image:https://img.shields.io/github/v/release/brobeson/SupportFileQuality?sort=semver&logo=github&label=Release[GitHub Release,link=https://github.com/brobeson/SupportFileQuality/releases/latest]
-|A reusable workflow to ensure quality in dot files 
+|A reusable workflow to ensure quality in dot files
+
+|https://github.com/brobeson/IssueAutomation[Issue & PR Automation]
+|image:https://img.shields.io/github/v/release/brobeson/IssueAutomation?sort=semver&logo=github&label=Release[Github Release,link=https://github.com/brobeson/IssueAutomation/releases/latest]
+|Automate repetitive issue and pull request tasks
 |===
 
 // == Publications
