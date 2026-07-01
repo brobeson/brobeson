@@ -1,6 +1,16 @@
 # Programming Style & Standard
 
-## General
+## Style
+
+### Use formatting tools
+
+Ensure consistent formatting with tool automation.
+
+| Tool | Language |
+| :------- | :--- |
+| [clang-format](https://clang.llvm.org/docs/ClangFormat.html) | C++ |
+| [shfmt](https://webinstall.dev/shfmt/) | Bash scripts |
+| [Prettier](https://prettier.io/) | JSON, Markdown, YAML |
 
 ### Case
 
