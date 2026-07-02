@@ -2,6 +2,44 @@
 
 ## Style
 
+### Use active voice.
+
+When writing documentation, Git commits, etc., prefer active voice.
+There are occasions when passive voice is more concise that active voice, but use active voice for most sentences.
+
+```markdown
+When the Start button is clicked by the user...  <!-- poor -->
+
+When the user clicks the Start button...         <!-- good -->
+```
+
+### Use imperative sentences.
+
+When writing documetation, Git commits, etc., use [imperative sentences](https://www.grammarly.com/blog/sentences/imperative-sentences/).
+
+```c++
+/// \brief This function adds two vectors together.   (poor)
+vec3 operator+(const vec3& v, const vec3& w);
+  
+/// \brief Add two vectors.                           (good)
+vec3 operator+(const vec3& v, const vec3& w);
+```
+
+```md
+1. The developer should run `cmake --build .` to build the software.  <!-- poor -->
+
+1. Run `cmake --build .` to build the software.                       <!-- good -->
+```
+
+### Use a spell checker.
+
+Spell checkers exist for source code.
+My preferred tool is [CSpell](https://cspell.org/), but any spell checker should work.
+
+> [!important]
+> Spell checking isn't just about typos in documentation.
+> I've actually found bugs by running a spell checker at work.
+
 ### Use formatting tools
 
 Ensure consistent formatting with tool automation.
