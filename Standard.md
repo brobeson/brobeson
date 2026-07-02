@@ -44,15 +44,14 @@ My preferred tool is [CSpell](https://cspell.org/), but any spell checker should
 
 Ensure consistent formatting with tool automation.
 
-| Tool | Language |
-| :------- | :--- |
-| [clang-format](https://clang.llvm.org/docs/ClangFormat.html) | C++ |
-| [shfmt](https://webinstall.dev/shfmt/) | Bash scripts |
-| [Prettier](https://prettier.io/) | JSON, Markdown, YAML |
 
-### Case
+- [clang-format](https://clang.llvm.org/docs/ClangFormat.html) for C++
+- [shfmt](https://webinstall.dev/shfmt/) for Bash scripts
+- [Prettier](https://prettier.io/) for JSON, Markdown, and YAML
+- [Black](https://black.readthedocs.io/en/stable/) for Python
 
-Follow industry standards for a particular language or technology.
+### Follow language standards for identifier naming.
+
 Some examples are
 
 - Bash scripts: `UPPER_SNAKE_CASE`
@@ -61,10 +60,13 @@ Some examples are
 
 ## Documentation
 
-1. Prefer Markdown.
-   ReStructured text and ASCII Doc are OK when necessary.
-1. Write one sentence per line.
-   This makes diffs easier to review because whole paragraphs don't reflow.
+### Prefer Markdown for documentation.
+
+ReStructured text and ASCII Doc are OK when necessary.
+
+### Write one sentence per line.
+
+This makes diffs easier to review because whole paragraphs don't reflow.
 
 ## C++
 
@@ -75,55 +77,53 @@ Some examples are
 Document inline static and dynamic analysis suppressions with a comment.
 The comment must explain why the suppression is necessary.
 
-- Poor
-  ```c++
-  enum class color {
-    // 100 color enumerators...
-  };
-  std::string to_string(const color c) {
-    // #lizard-forgives
-    switch (c) {
-      // 100 case statements...
-    }
-  }
-  ```
-- Good
-  ```c++
-  enum class color {
-    // 100 color enumerators...
-  };
-  std::string to_string(const color c) {
-    // #lizard-forgives
-    // There aren't other implementations that reduce
-    // the cyclomatic complexity. Also, each case is
-    // short and easy to read.
-    switch (c) {
-      // 100 case statements...
-    }
-  }
-  ```
+```c++
+enum class color {
+  // 100 color enumerators...
+};
 
-### Limit the scope of inline suppressions
+// Poor - the suppression doesn't document why the issue
+// is suppressed instead of fixed.
+std::string to_string(const color c) {
+  // #lizard-forgives
+  switch (c) {
+    // 100 case statements...
+  }
+}
+
+// Good
+std::string to_string(const color c) {
+  // #lizard-forgives
+  // There aren't other implementations that reduce
+  // the cyclomatic complexity. Also, each case is
+  // short and easy to read.
+  switch (c) {
+    // 100 case statements...
+  }
+}
+```
+
+### Limit the scope of inline suppressions.
 
 Limit the checks that a suppression applies to and limit the code that a suppression applies to.
 
-- Poor - This suppresses all clang-tidy checks on the suppressed line.
-  ```c++
-  void call_a_c_function(const std::string& s) {
-    c_function(s.c_str(), s.size());  // NOLINT
-  }
-  ```
-- Poor - This suppresses checks for an entire function.
-  ```c++
-  // NOLINTBEGIN
-  void call_c_function(const std::string& s) {
-    c_function(s.c_str(), s.size());
-  }
-  // NOLINTEND
-- Good - This limits the suppression to one specifici issue.
-  ```c++
-  void call_c_functon(const std::string& s) {
-    // NOLINTNEXTLINE(cppcoreguidelines-avoid-pointer-arithmetic)
-    c_function(s.c_str(), s.size());
-  }
-  ```
+```c++
+// Poor - This suppresses all clang-tidy checks on the suppressed line.
+void call_a_c_function(const std::string& s) {
+  c_function(s.c_str(), s.size());  // NOLINT
+}
+
+// Poor - This suppresses checks for an entire function.
+// NOLINTBEGIN
+void call_c_function(const std::string& s) {
+  c_function(s.c_str(), s.size());
+}
+// NOLINTEND
+
+// Good - This limits the suppression to one specific issue and to
+// a single line.
+void call_c_functon(const std::string& s) {
+  // NOLINTNEXTLINE(cppcoreguidelines-avoid-pointer-arithmetic)
+  c_function(s.c_str(), s.size());
+}
+```
