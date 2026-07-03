@@ -4,7 +4,7 @@
 
 ### Use active voice.
 
-When writing documentation, Git commits, etc., prefer active voice.
+When writing documentation, Git commits, etc., prefer [active voice](https://www.grammarly.com/blog/sentences/active-vs-passive-voice/).
 There are occasions when passive voice is more concise that active voice, but use active voice for most sentences.
 
 ```markdown
@@ -109,7 +109,7 @@ Limit the checks that a suppression applies to and limit the code that a suppres
 
 ```c++
 // Poor - This suppresses all clang-tidy checks on the suppressed line.
-void call_a_c_function(const std::string& s) {
+void call_c_function(const std::string& s) {
   c_function(s.c_str(), s.size());  // NOLINT
 }
 
